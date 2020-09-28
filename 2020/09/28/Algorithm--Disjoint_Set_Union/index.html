@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>算法--并查集 | xiaolei565</title><meta name="keywords" content="算法,数据结构,并查集,图论,连通图"><meta name="author" content="Glor"><meta name="copyright" content="Glor"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="算法–并查集例子就是杭电上的畅通工程： http:&#x2F;&#x2F;acm.hdu.edu.cn&#x2F;showproblem.php?pid&#x3D;1232   首先在地图上给你若干个城镇，这些城镇都可以看作点，然后告诉你哪些对城镇之间是有道路直接相连的。最后要解决的是整幅图的连通性问题。比如随意给你两个点，让你判断它们是否连通，或者问你整幅图一共有几个连通分支，也就是被分成了几个互相独立的块。像畅通工程这题，问还需要修">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法--并查集">
+<meta property="og:url" content="https://xiaolei565.github.io/2020/09/28/Algorithm--Disjoint_Set_Union/index.html">
+<meta property="og:site_name" content="xiaolei565">
+<meta property="og:description" content="算法–并查集例子就是杭电上的畅通工程： http:&#x2F;&#x2F;acm.hdu.edu.cn&#x2F;showproblem.php?pid&#x3D;1232   首先在地图上给你若干个城镇，这些城镇都可以看作点，然后告诉你哪些对城镇之间是有道路直接相连的。最后要解决的是整幅图的连通性问题。比如随意给你两个点，让你判断它们是否连通，或者问你整幅图一共有几个连通分支，也就是被分成了几个互相独立的块。像畅通工程这题，问还需要修">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolei565.github.io/null">
+<meta property="article:published_time" content="2020-09-28T12:48:05.930Z">
+<meta property="article:modified_time" content="2020-05-11T00:34:25.000Z">
+<meta property="article:author" content="Glor">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="并查集">
+<meta property="article:tag" content="图论">
+<meta property="article:tag" content="连通图">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolei565.github.io/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xiaolei565.github.io/2020/09/28/Algorithm--Disjoint_Set_Union/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-05-11 08:34:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">246</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">117</div></a></div></div></div><hr/></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E2%80%93%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">1.</span> <span class="toc-text">算法–并查集</span></a></li></ol></div></div></div><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">算法--并查集</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T12:48:05.930Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-05-11T00:34:25.000Z" title="更新于 2020-05-11 08:34:25">2020-05-11</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="算法–并查集"><a href="#算法–并查集" class="headerlink" title="算法–并查集"></a>算法–并查集</h1><p>例子就是杭电上的畅通工程：</p>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=1232">http://acm.hdu.edu.cn/showproblem.php?pid=1232</a>  </p>
+<p>首先在地图上给你若干个城镇，这些城镇都可以看作点，然后告诉你哪些对城镇之间是有道路直接相连的。最后要解决的是整幅图的连通性问题。比如随意给你两个点，让你判断它们是否连通，或者问你整幅图一共有几个连通分支，也就是被分成了几个互相独立的块。像畅通工程这题，问还需要修几条路，实质就是求有几个连通分支。</p>
+<p>如果是 1 个连通分支，说明整幅图上的点都连起来了，不用再修路了；如果是 2 个连通分支，则只要再修 1 条路，从两个分支中各选一个点，把它们连起来，那么所有的点都是连起来的了；如果是 3 个连通分支，则只要再修两条路…… </p>
+<p>以下面这组数据输入数据来说明  </p>
+<p>4 2 1 3 4 3<br>第一行告诉你，一共有 4 个点，2 条路。下面两行告诉你，1、3 之间有条路，4、3 之间有条路。那么整幅图就被分成了 1-3-4 和 2 两部分。只要再加一条路，把 2 和其他任意一个点连起来，畅通工程就实现了，那么这个这组数据的输出结果就是 1。好了，现在编程实现这个功能吧，城镇有几百个，路有不知道多少条，而且可能有回路。 这可如何是好？<br>我以前也不会呀，自从用了并查集之后，嗨，效果还真好！我们全家都用它！  </p>
+<p>并查集由一个整数型的数组和两个函数构成。数组 pre[] 记录了每个点的前导点是什么，函数 find 是查找，join 是合并。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> pre[<span class="number">1010</span>]; <span class="comment">//存放第i个元素的父节点</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">unionsearch</span><span class="params">(<span class="keyword">int</span> root)</span> <span class="comment">//查找根结点</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> son, tmp;</span><br><span class="line">	son = root;</span><br><span class="line">	<span class="keyword">while</span>(root != pre[root]) <span class="comment">//寻找根结点</span></span><br><span class="line">		root = pre[root];</span><br><span class="line">	<span class="keyword">while</span>(son != root) <span class="comment">//路径压缩</span></span><br><span class="line">	&#123;</span><br><span class="line">		tmp = pre[son];</span><br><span class="line">		pre[son] = root;</span><br><span class="line">		son = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> root1, <span class="keyword">int</span> root2)</span> <span class="comment">//判断是否连通，不连通就合并</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">	x = unionsearch(root1);</span><br><span class="line">	y = unionsearch(root2);</span><br><span class="line">	<span class="keyword">if</span>(x != y) <span class="comment">//如果不连通，就把它们所在的连通分支合并</span></span><br><span class="line">		pre[x] = y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了解释并查集的原理，我将举一个更有爱的例子。</p>
+<p> 话说江湖上散落着各式各样的大侠，有上千个之多。他们没有什么正当职业，整天背着剑在外面走来走去，碰到和自己不是一路人的，就免不了要打一架。但大侠们有一个优点就是讲义气，绝对不打自己的朋友。而且他们信奉 “朋友的朋友就是我的朋友”，只要是能通过朋友关系串联起来的，不管拐了多少个弯，都认为是自己人。这样一来，江湖上就形成了一个一个的帮派，通过两两之间的朋友关系串联起来。而不在同一个帮派的人，无论如何都无法通过朋友关系连起来，于是就可以放心往死了打。但是两个原本互不相识的人，如何判断是否属于一个朋友圈呢？</p>
+<p>我们可以在每个朋友圈内推举出一个比较有名望的人，作为该圈子的代表人物。这样，每个圈子就可以这样命名 “中国同胞队” 美国同胞队”…… 两人只要互相对一下自己的队长是不是同一个人，就可以确定敌友关系了。<br>但是还有问题啊，大侠们只知道自己直接的朋友是谁，很多人压根就不认识队长,要判断自己的队长是谁，只能漫无目的的通过朋友的朋友关系问下去：“你是不是队长？你是不是队长？” 这样，想打一架得先问个几十年，饿都饿死了，受不了。这样一来，队长面子上也挂不住了，不仅效率太低，还有可能陷入无限循环中。于是队长下令，重新组队。队内所有人实行分等级制度，形成树状结构，我队长就是根节点，下面分别是二级队员、三级队员。每个人只要记住自己的上级是谁就行了。遇到判断敌友的时候，只要一层层向上问，直到最高层，就可以在短时间内确定队长是谁了。由于我们关心的只是两个人之间是否是一个帮派的，至于他们是如何通过朋友关系相关联的，以及每个圈子内部的结构是怎样的，甚至队长是谁，都不重要了。所以我们可以放任队长随意重新组队，只要不搞错敌友关系就好了。于是，门派产生了。<br><img src="http://img.bestaust.cn/20200510130915.png"></p>
+<p>下面我们来看并查集的实现。 int pre[1000]; 这个数组，记录了每个大侠的上级是谁。大侠们从 1 或者 0 开始编号（依据题意而定），pre[15]=3 就表示 15 号大侠的上级是 3 号大侠。如果一个人的上级就是他自己，那说明他就是掌门人了，查找到此为止。也有孤家寡人自成一派的，比如欧阳锋，那么他的上级就是他自己。每个人都只认自己的上级。比如胡青牛同学只知道自己的上级是杨左使。张无忌是谁？不认识！要想知道自己的掌门是谁，只能一级级查上去。 </p>
+<p>find 这个函数就是找掌门用的，意义再清楚不过了（路径压缩算法先不论，后面再说）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">unionsearch</span><span class="params">(<span class="keyword">int</span> root)</span> <span class="comment">//查找根结点</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> son, tmp;</span><br><span class="line">	son = root;</span><br><span class="line">	<span class="keyword">while</span>(root != pre[root]) <span class="comment">//我的上级不是掌门</span></span><br><span class="line">		root = pre[root];</span><br><span class="line">	<span class="keyword">while</span>(son != root) <span class="comment">//我就找他的上级，直到掌门出现</span></span><br><span class="line">	&#123;</span><br><span class="line">		tmp = pre[son];</span><br><span class="line">		pre[son] = root;</span><br><span class="line">		son = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> root; <span class="comment">//掌门驾到~~</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 再来看看 join 函数，就是在两个点之间连一条线，这样一来，原先它们所在的两个板块的所有点就都可以互通了。这在图上很好办，画条线就行了。但我们现在是用并查集来描述武林中的状况的，一共只有一个 pre[] 数组，该如何实现呢？ 还是举江湖的例子，假设现在武林中的形势如图所示。虚竹帅锅与周芷若 MM 是我非常喜欢的两个人物，他们的终极 boss 分别是玄慈方丈和灭绝师太，那明显就是两个阵营了。我不希望他们互相打架，就对他俩说：“你们两位拉拉勾，做好朋友吧。” 他们看在我的面子上，同意了。这一同意可非同小可，整个少林和峨眉派的人就不能打架了。这么重大的变化，可如何实现呀，要改动多少地方？其实非常简单，我对玄慈方丈说：“大师，麻烦你把你的上级改为灭绝师太吧。这样一来，两派原先的所有人员的终极 boss 都是师太，那还打个球啊，反正我们关心的只是连通性，门派内部的结构不要紧的。” 玄慈一听肯定火大了：“我靠，凭什么是我变成她手下呀，怎么不反过来？我抗议！” 于是，两人相约一战，杀的是天昏地暗，风云为之变色啊，但是啊，这场战争终究会有胜负，胜者为王。弱者就被吞并了。反正谁加入谁效果是一样的，门派就由两个变成一个了。这段函数的意思明白了吧？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> root1, <span class="keyword">int</span> root2)</span> <span class="comment">//虚竹和周芷若做朋友</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">	x = unionsearch(root1);<span class="comment">//我老大是玄慈</span></span><br><span class="line">	y = unionsearch(root2);<span class="comment">//我老大是灭绝</span></span><br><span class="line">	<span class="keyword">if</span>(x != y) </span><br><span class="line">		pre[x] = y; <span class="comment">//打一仗，谁赢就当对方老大</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再来看看路径压缩算法。建立门派的过程是用 join 函数两个人两个人地连接起来的，谁当谁的手下完全随机。最后的树状结构会变成什么样，我也无法预知，一字长蛇阵也有可能。这样查找的效率就会比较低下。最理想的情况就是所有人的直接上级都是掌门，一共就两级结构，只要找一次就找到掌门了。哪怕不能完全做到，也最好尽量接近。这样就产生了路径压缩算法。</p>
+<p> 设想这样一个场景：两个互不相识的大侠碰面了，想知道能不能干一场。 于是赶紧打电话问自己的上级：“你是不是掌门？” 上级说：“我不是呀，我的上级是谁谁谁，你问问他看看。” 一路问下去，原来两人的最终 boss 都是东厂曹公公。 “哎呀呀，原来是自己人，有礼有礼，在下三营六组白面葫芦娃!” “幸会幸会，在下九营十八组仙子狗尾巴花！” 两人高高兴兴地手拉手喝酒去了。 “等等等等，两位大侠请留步，还有事情没完成呢！” 我叫住他俩。 “哦，对了，还要做路径压缩。” 两人醒悟。 白面葫芦娃打电话给他的上级六组长：“组长啊，我查过了，其实偶们的掌门是曹公公。不如偶们一起结拜在曹公公手下吧，省得级别太低，以后查找掌门麻烦。” “唔，有道理。” 白面葫芦娃接着打电话给刚才拜访过的三营长…… 仙子狗尾巴花也做了同样的事情。 这样，查询中所有涉及到的人物都聚集在曹公公的直接领导下。每次查询都做了优化处理，所以整个门派树的层数都会维持在比较低的水平上。路径压缩的代码，看得懂很好，看不懂可以自己模拟一下，很简单的一个递归而已。总之它所实现的功能就是这么个意思。</p>
+<p><img src="http://img.bestaust.cn/20200510131129.png"></p>
+<p>于是，问题圆满解决。。。。。。。。。</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> pre[<span class="number">1010</span>]; <span class="comment">//里面全是掌门</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">unionsearch</span><span class="params">(<span class="keyword">int</span> root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> son, tmp;</span><br><span class="line">	son = root;</span><br><span class="line">	<span class="keyword">while</span>(root != pre[root]) <span class="comment">//寻找掌门ing……</span></span><br><span class="line">		root = pre[root];</span><br><span class="line">	<span class="keyword">while</span>(son != root) <span class="comment">//路径压缩</span></span><br><span class="line">	&#123;</span><br><span class="line">		tmp = pre[son];</span><br><span class="line">		pre[son] = root;</span><br><span class="line">		son = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> root; <span class="comment">//掌门驾到~</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num, road, total, i, start, end, root1, root2;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;num, &amp;road) &amp;&amp; num)</span><br><span class="line">	&#123;</span><br><span class="line">		total = num - <span class="number">1</span>; <span class="comment">//共num-1个门派</span></span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= num; ++i) <span class="comment">//每条路都是掌门</span></span><br><span class="line">			pre[i] = i;</span><br><span class="line">		<span class="keyword">while</span>(road--)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;start, &amp;end); <span class="comment">//他俩要结拜</span></span><br><span class="line">			root1 = unionsearch(start);</span><br><span class="line">			root2 = unionsearch(end);</span><br><span class="line">			<span class="keyword">if</span>(root1 != root2) <span class="comment">//掌门不同？踢馆！~</span></span><br><span class="line">			&#123;</span><br><span class="line">				pre[root1] = root2;</span><br><span class="line">				total--; <span class="comment">//门派少一个，敌人（要建的路）就少一个</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, total);<span class="comment">//天下局势：还剩几个门派</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>原文地址： <a target="_blank" rel="noopener" href="https://blog.csdn.net/niushuai666/article/details/6662911">https://blog.csdn.net/niushuai666/article/details/6662911</a> </p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Glor</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xiaolei565.github.io/2020/09/28/Algorithm--Disjoint_Set_Union/">https://xiaolei565.github.io/2020/09/28/Algorithm--Disjoint_Set_Union/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xiaolei565.github.io" target="_blank">xiaolei565</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><a class="post-meta__tags" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a><a class="post-meta__tags" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a><a class="post-meta__tags" href="/tags/%E8%BF%9E%E9%80%9A%E5%9B%BE/">连通图</a></div><div class="post_share"><div class="social-share" data-image="/null" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/28/Algorithm--QuickSort/"><img class="prev-cover" src="/null" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">算法--快速排序</div></div></a></div><div class="next-post pull-right"><a href="/2020/09/28/Algorithm--BloomFilter/"><img class="next-cover" src="/null" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">算法与数据结构--布隆过滤器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/09/28/Algorithm--Bit_Operation/" title="算法--位运算"><img class="cover" src="/null"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">算法--位运算</div></div></a></div><div><a href="/2020/09/28/Algorithm--QuickSort/" title="算法--快速排序"><img class="cover" src="/null"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">算法--快速排序</div></div></a></div><div><a href="/2020/09/28/Algorithm--Recursion/" title="三道题套路解决递归问题"><img class="cover" src="/null"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">三道题套路解决递归问题</div></div></a></div><div><a href="/2020/09/28/Algorithm--BloomFilter/" title="算法与数据结构--布隆过滤器"><img class="cover" src="/null"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">算法与数据结构--布隆过滤器</div></div></a></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

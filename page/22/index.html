@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>xiaolei565 - 做一个幸福的人</title><meta name="keywords" content="PAT,PTA,程序员，小程序，Java，leetcode"><meta name="author" content="Glor"><meta name="copyright" content="Glor"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="xiaolei565">
+<meta property="og:url" content="https://xiaolei565.github.io/page/22/index.html">
+<meta property="og:site_name" content="xiaolei565">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolei565.github.io/null">
+<meta property="article:author" content="Glor">
+<meta property="article:tag" content="PAT,PTA,程序员，小程序，Java，leetcode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolei565.github.io/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xiaolei565.github.io/page/22/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-09-28 20:48:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">246</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">117</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--ThinkingOfJava/" title="Java面试--谈谈你对Java平台的理解">Java面试--谈谈你对Java平台的理解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.995Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java–谈谈你对Java平台的理解今日问题：谈谈你对Java平台的理解？Java是解释执行，这句话正确吗？
+问题比较开放，考察点很多，比如基础知识，是否掌握Java平台主要模块和运行原理
+尽量表现出自己的思维深入并系统化，Java知识理解也比较全面
+
+典型回答：
+
+Java本身是一种面向对象的语言，最显著的特性有两个方面，一个是“编写一次，到处执行”，跨平台，还有一个就是垃圾收集，Java通过GC来回收分配内存，程序员一般不用担心内存的分配和回收
+
+我们日常接触到的JRE和JDK，JRE也就是Java运行环境，包含JVM和Java类库，以及一些模块等，而JDK可以看作是JRE的一个超集，提供了更多的工具，比如编译器，javadoc，各种诊断工具等
+
+对于解释执行这句，说法不太准确,Java源代码，首先需要进行javac编译成字节码（.class）然后在运行时，通过Java虚拟机内嵌的解释器将字节码转换成最终的机器码。现在常见的JVM，如Hotspot JVM，都提供了JIT编译器，也就是通常所说的动态编译器，JIT能够在运行时将热点代码编译成机器码，这种情况部分热点代码就属于编译执行 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--String/" title="Java基础--理解Java中String，StringBuffer，StringBuilder有什么区别">Java基础--理解Java中String，StringBuffer，StringBuilder有什么区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.993Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java基础–理解Java中String，StringBuffer，StringBuilder有什么区别
+String时Java语言非常基础和重要的类，提供了构造和管理字符串的各种基本逻辑。它时典型的Immutable（不可变）类，被声明为final ，其所有属性也都时final。当然也是由于它的不可变性，导致类似拼接，裁剪字符串时，都会产生新的String对象。由于字符串操作的普遍性，所有相关操作的效率往往对应用的性能有明显的影响
+StingBuffer是为了解决上面提到拼接产生太多中间对象的问题而提供的一个类，我们可以用append或者add方法，将字符串添加到已有序列的末尾或者指定位置。本质上是一个线程安全对的可修改的字符序列，它保证了线程安全，也随之带来了额外的性能开销，所以除非有线程安全的需要，不然还是推荐使用下面的StringBuilder
+StringBuilder是Java1.5之后新增的，在能力上和StringBuffer没有区别，但是去掉了线程安全的部分，有效减小了开销，是绝大多数情况下进行字符串拼接的首选
+
+为了实现修改字符序列的目的，StringBuffer和S ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Spring_IOC/" title="Spring--IOC">Spring--IOC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.991Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Spring–IOCSpring–事务事务传播特性</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Spring_Config/" title="Spring--Config">Spring--Config</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.990Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Spring–Config 别名 : alias 设置别名 , 为bean设置别名 , 可以设置多个别名 
+12&lt;!--设置别名：在获取Bean的时候可以使用别名获取--&gt;&lt;alias name&#x3D;&quot;userT&quot; alias&#x3D;&quot;userNew&quot;&#x2F;&gt;
+
+ Bean的配置 
+12345678910111213&lt;!--bean就是java对象,由Spring创建和管理--&gt;&lt;!--   id 是bean的标识符,要唯一,如果没有配置id,name就是默认标识符   如果配置id,又配置了name,那么name是别名   name可以设置多个别名,可以用逗号,分号,空格隔开   如果不配置id和name,可以根据applicationContext.getBean(.class)获取对象;class是bean的全限定名&#x3D;包名+类名--&gt;&lt;bean id&#x3D;&quot;hello&quot; name&#x3D;&quot;hello2 h2,h3;h4&q ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Spring_Bean/" title="Spring--IOC中创建Bean">Spring--IOC中创建Bean</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.988Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Spring–IOC 通过无参构造方法来创建 
+ 1、User.java 
+1234567891011121314151617public class User &#123;   private String name;   public User() &#123;       System.out.println(&quot;user无参构造方法&quot;);  &#125;   public void setName(String name) &#123;       this.name &#x3D; name;  &#125;   public void show()&#123;       System.out.println(&quot;name&#x3D;&quot;+ name );  &#125;&#125;
+
+ 2、beans.xml 
+1234567891011&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;&lt;beans xmlns&#x3D;&quot;ht ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Spring_Autowired/" title="Spring--Autowired">Spring--Autowired</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.986Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Spring–Autowired@Autowired
+直接在属性上使用即可，也可以使用在set方法上
+使用Autowired注解后可以不编写set方法，前提是自动装配的属性在IOC容器中存在，且符合名字byname
+@Nullable 某个字段标注了这个注解，说明这个字段可以为null，等同于下方注解
+@Autowired(required = false）对象可以为null，否则不可以为空
+@Qualifier
+@Autowired是根据类型自动装配的，加上@Qualifier则可以根据byName的方式自动装配
+@Qualifier不能单独使用。
+
+@Resource
+@Resource如有指定的name属性，先按该属性进行byName方式查找装配；
+其次再进行默认的byName方式进行装配；
+如果以上都不成功，则按byType的方式自动装配。
+都不成功，则报异常。
+
+@Autowired与@Resource异同：
+1、@Autowired与@Resource都可以用来装配bean。都可以写在字段上，或写在setter方法上。
+2、@Autowired默认按类型装配（属于sprin ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Sleep()&amp;Wait()/" title="Java--sleep()和wait()区别">Java--sleep()和wait()区别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.984Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java–sleep()和wait()区别对照代码来解释比较好理解
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253package com.Thread;public class ThreadTest &#123;    private static Object lockedObject = new Object();    public static class WaitRunner implements Runnable&#123;        @Override        public void run() &#123;            synchronized (lockedObject)&#123;//                long startTime=System.currentTimeMillis();   //获取开始时间                System.out.println(&quot; ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Reflect/" title="Java基础--Java反射和应用（未写完）">Java基础--Java反射和应用（未写完）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.982Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java基础–Java反射和应用什么是反射反射就是指程序在运行的时候知道一个类的自身信息。
+
+对于任何一类：可以知道这个类的属性和方法
+对于任何一个对象：可以调用这个对象的任何一个方法和属性
+
+反射就是将Java类中的各种成分映射成一个个Java对象
+获取class文件对象的三种方式
+Object类的getClass()方法
+123456&#x2F;&#x2F;1.在内存中新建一个Person的实例，对象p对这个内存地址进行引用Person p &#x3D; new Person();&#x2F;&#x2F;2.对象p调用getClass()返回对象p所对应的Class对象Class&lt;?&gt; cls &#x3D; p.getClass();&#x2F;&#x2F;3.调用newInstance()方法让Class对象在内存创建对应的实例，并且让p2引用实例的内存地址Person p2 &#x3D; (Person)cls.newInstance();
+
+静态属性class
+
+Class类中静态方法forName()
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--MultiThreading/" title="Java--多线程">Java--多线程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.980Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java–多线程相关介绍线程有哪些基本状态
+
+
+
+
+状态名称
+说明
+
+
+
+NEW
+初始状态，线程被构建，但是还没有调用start()方法
+
+
+RUNNABLE
+运行状态，Java线程将操作系统中的就绪和运行两种状态，笼统称为运行中
+
+
+BLOCKED
+阻塞状态，表示线程阻塞于锁
+
+
+WAITING
+等待状态，表示线程进入等待状态，进入该状态标识当前线程需要等待其他线程做出一些特定的动作（通知或中断）
+
+
+TIME_WAITING
+超时等待状态，该状态不同于WAITING，它可以在指定的时间自行返回的
+
+
+TERMINATED
+终止状态，表示当前线程已经执行完毕了
+
+
+
+
+
+
+
+
+
+
+
+wait
+进入等待释放，线程释放持有的锁
+wait()方法返回，线程获取到锁,进入等待队列
+
+
+wait(long)
+进入timeed_waiting状态时，释放当前持有的锁
+wait(long)方法返回，线程获取到锁，进入等待队列
+
+
+notify()
+唤醒一个线程从等待队列进入同步队列中，不会释放当前持有的锁。
+
+
+
+notifyAll()
+将等待队列中的所有线程移到同步队列中，不会释放当前持有的锁
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Map/" title="Java基础--Map集合">Java基础--Map集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.978Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java基础–Map集合HashMap与HashTable的区别
+线程安全：HashMap非线程安全，HashTable非线程安全的，因为hashTable内部方法基本经过synchronized修饰
+效率：HashMap因为非线程安全，执行效率比HashTable高一点（但HashTable现在基本不用了）
+kv是否可为空：HashTable不允许，HashMap允许有一个null的键，但可以允许有多个null的值
+初始值与扩容：
+HashTable:初始默认11，若给定了初始值就使用给定值，扩容2n+1
+HashMap：初始默认16，若给定初始值不够2的幂次方，则自动扩充为2的幂次方，（也就是说HashMap总是以2的幂来作为哈希表的大小）扩容2n
+
+
+底层数据结构：
+HashTable：数组+链表
+HashMap：数组+链表（Jdk1.8以前）
+
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/21/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/23/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">246</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">117</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Spring--Transaction/" title="Spring--事务">Spring--事务</a><time datetime="2020-09-28T12:48:06.375Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Spring--First%20to%20Know/" title="Spring--基础解析">Spring--基础解析</a><time datetime="2020-09-28T12:48:06.373Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Redis--No1/" title="Redis--数据持久化">Redis--数据持久化</a><time datetime="2020-09-28T12:48:06.372Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/PAT--B1092/" title="B1092 最好吃的月饼 (20 分)(简单)">B1092 最好吃的月饼 (20 分)(简单)</a><time datetime="2020-09-28T12:48:06.370Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/PAT--B1091/" title="B1091 N-自守数 (15 分)">B1091 N-自守数 (15 分)</a><time datetime="2020-09-28T12:48:06.368Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/DFS/" style="font-size: 1.2em; color: #999da3">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.13em; color: #999a9c">IOC</a> <a href="/tags/JVM/" style="font-size: 1.13em; color: #999a9c">JVM</a> <a href="/tags/Java/" style="font-size: 1.13em; color: #999a9c">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.13em; color: #999a9c">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.17em; color: #999c9f">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.23em; color: #999ea6">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.23em; color: #999ea6">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.43em; color: #99a6b9">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.33em; color: #99a2af">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.13em; color: #999a9c">Redis</a> <a href="/tags/SQL/" style="font-size: 1.13em; color: #999a9c">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.23em; color: #999ea6">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.13em; color: #999a9c">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/set/" style="font-size: 1.17em; color: #999c9f">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.17em; color: #999c9f">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.27em; color: #99a0a9">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.37em; color: #99a4b2">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.2em; color: #999da3">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1.17em; color: #999c9f">优先队列</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 1.3em; color: #99a1ac">位运算</a> <a href="/tags/%E5%80%BC%E5%BE%97%E5%9B%9E%E7%9C%8B/" style="font-size: 1.4em; color: #99a5b6">值得回看</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.13em; color: #999a9c">分布式</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 1.2em; color: #999da3">分治</a> <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: #999">创建型模式</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 1.47em; color: #99a8bc">剑指offer</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">246</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">246</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-09-28T12:48:24.655Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>

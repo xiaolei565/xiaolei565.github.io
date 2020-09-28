@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>xiaolei565 - 做一个幸福的人</title><meta name="keywords" content="PAT,PTA,程序员，小程序，Java，leetcode"><meta name="author" content="Glor"><meta name="copyright" content="Glor"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="xiaolei565">
+<meta property="og:url" content="https://xiaolei565.github.io/page/18/index.html">
+<meta property="og:site_name" content="xiaolei565">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolei565.github.io/null">
+<meta property="article:author" content="Glor">
+<meta property="article:tag" content="PAT,PTA,程序员，小程序，Java，leetcode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolei565.github.io/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xiaolei565.github.io/page/18/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-09-28 20:48:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">246</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">117</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--141/" title="141. 环形链表(简单)">141. 环形链表(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.067Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">141. 环形链表(简单)给定一个链表，判断链表中是否有环。
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+示例 1：输入：head = [3,2,0,-4], pos = 1输出：true解释：链表中有一个环，其尾部连接到第二个节点。
+示例 2：输入：head = [1,2], pos = 0输出：true解释：链表中有一个环，其尾部连接到第一个节点。
+示例 3：输入：head = [1], pos = -1输出：false解释：链表中没有环。
+进阶：你能用 O(1)（即，常量）内存解决此问题吗？
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/linked-list-cycle
+
+
+思路：这题依旧使用链表常用解法，快慢指针，如果快指针直接指向null则无环，如果某一时刻快指针和慢指针重合，就有环，使用该方法好处是不用额外的空间O（1），而使用集合存储元素时，有重复的就代表有环，空间代价为O（n）
+代码：12345678910111 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--138/" title="138. 复制带随机指针的链表/面试题35. 复杂链表的复制(一般)">138. 复制带随机指针的链表/面试题35. 复杂链表的复制(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.065Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">138. 复制带随机指针的链表/面试题35. 复杂链表的复制(一般)给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。
+要求返回这个链表的 深拷贝。 
+我们用一个由 n 个节点组成的链表来表示输入/输出中的链表。每个节点用一个 [val, random_index] 表示：
+
+val：一个表示 Node.val 的整数。
+
+random_index：随机指针指向的节点索引（范围从 0 到 n-1）；如果不指向任何节点，则为  null 。
+示例 1： 
+
+
+
+
+12输入：head &#x3D; [[7,null],[13,0],[11,4],[10,2],[1,0]]输出：[[7,null],[13,0],[11,4],[10,2],[1,0]]
+
+示例 2： 
+
+12输入：head &#x3D; [[1,1],[2,1]]输出：[[1,1],[2,1]]
+
+示例 3： 
+
+12输入：head &#x3D; [[3,null],[3,0],[3,null]]输出：[[3,null],[3,0],[3,null]]
+
+示例 4： 
+123输入：he ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--137/" title="137. 只出现一次的数字 II/面试题56 - II. 数组中数字出现的次数 II(较难)">137. 只出现一次的数字 II/面试题56 - II. 数组中数字出现的次数 II(较难)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.063Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">137. 只出现一次的数字 II/面试题56 - II. 数组中数字出现的次数 II(较难)给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:输入: [2,2,3,2]输出: 3
+示例 2:输入: [0,1,0,1,0,1,99]输出: 99
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/single-number-ii
+
+
+说明leetcode137与offer的不是特别一样，但代码都可以跑起来，leetcode要求不使用额外空间，其实也就是状态机，位运算的方式，后面来补（200519）
+思路1：
+如果一个数字出现三次，则它二进制表示的每一位也出现三次。
+
+如果把所有出现三次的数字的二进制表示的每一位都分别加起来，则每一位的和都能被3整除。
+将数组中的所有数字的二进制表示的每一位都加起来。如果某一位的和能被3整除，
+则只出现一次数字的二进制表示中对应的那一位是0，否则就是1。
+
+
+
+作者：l ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--136/" title="136. 只出现一次的数字(简单)">136. 只出现一次的数字(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.061Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">136. 只出现一次的数字(简单)给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+说明：
+你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
+示例 1:输入: [2,2,1]输出: 1
+示例 2:输入: [4,1,2,1,2]输出: 4
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/single-number
+
+
+思路1：
+任何数和 0 做异或运算，结果仍然是原来的数，即 a⊕0=a。
+任何数和其自身做异或运算，结果是 0，即 a⊕a=0。
+异或运算满足交换律和结合律，即 a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b
+
+思路2：其他解法：set，hash空间复杂度高
+代码1：123456789class Solution &#123;    public int singleNumber(int[] nums) &#123;        int res = 0;        for(int num:nums)&#123;            res  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--124/" title="124. 二叉树中的最大路径和(一般)">124. 二叉树中的最大路径和(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.059Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">124. 二叉树中的最大路径和(一般)给定一个非空二叉树，返回其最大路径和。
+本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。
+示例 1:1234输入: [1,2,3]   1  &#x2F; \ 2   3
+
+输出: 6
+示例 2:1234567输入: [-10,9,20,null,null,15,7]   -10   &#x2F; \  9  20    &#x2F;  \   15   7
+
+输出: 42
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/binary-tree-maximum-path-sum
+
+
+思路：未写
+代码：12345678910111213141516171819202122232425/** * Definition for a binary tree node. * public class TreeNode &#123; *     int val; *     TreeNode left; *     TreeNode right;  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--122/" title="122. 买卖股票的最佳时机 II(简单)">122. 买卖股票的最佳时机 II(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.058Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">122. 买卖股票的最佳时机 II(简单)给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+示例 1:输入:[7,1,5,3,6,4]输出: 7解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+示例 2:输入: [1,2,3,4,5]输出: 4解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。     注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。     因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。
+示例 3:输入: [7,6,4,3 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--113/" title="113. 路径总和 II/面试题34. 二叉树中和为某一值的路径(简单)">113. 路径总和 II/面试题34. 二叉树中和为某一值的路径(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.056Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">113. 路径总和 II/面试题34. 二叉树中和为某一值的路径(简单)给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+说明: 叶子节点是指没有子节点的节点。
+示例:给定如下二叉树，以及目标和 sum = 22，
+          5
+         / \
+        4   8
+       /   / \
+      11  13  4
+     /  \    / \
+    7    2  5   1
+返回:
+1234[   [5,4,11,2],   [5,8,4,5]]
+
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/path-sum-ii
+
+
+思路：和路径总和3一样，只不过不是输出路径个数了，要将路径全部输出出来
+代码：123456789101112131415161718192021222324252627/** * Definition for a binary tree node. * public class TreeNode &#123; *     int  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--111/" title="111. 二叉树的最小深度(简单)">111. 二叉树的最小深度(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.054Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">111. 二叉树的最小深度(简单)给定一个二叉树，找出其最小深度。
+最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+说明: 叶子节点是指没有子节点的节点。
+示例：给定二叉树 [3,9,20,null,null,15,7]，
+123453  &#x2F; \ 9  20   &#x2F;  \  15   7
+
+ 返回它的最小深度  2. 
+来源：力扣（LeetCode）链接： https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/ 
+
+
+思路：和104的思路一样，也是递归，但是要判断一下临界条件，当左右深度有为0的时候，单独进行判断
+代码：12345678910111213141516171819202122/** * Definition for a binary tree node. * public class TreeNode &#123; *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode(int x)  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--105/" title="105. 从前序与中序遍历序列构造二叉树/面试题07. 重建二叉树(较难)">105. 从前序与中序遍历序列构造二叉树/面试题07. 重建二叉树(较难)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.052Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">105. 从前序与中序遍历序列构造二叉树/面试题07. 重建二叉树(较难)根据一棵树的前序遍历与中序遍历构造二叉树。
+注意:你可以假设树中没有重复的元素。
+例如，给出
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历  inorder = [9,3,15,20,7]返回如下的二叉树：
+    3
+   / \
+  9  20
+    /  \
+   15   7
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
+
+
+思路1：前序遍历第一个节点是根节点，中序遍历根据前序遍历的根节点，可以知道左节点，和右节点，递归来就行
+思路2思路一存在一个问题，在中序遍历找到根节点的位置每次都得遍历中序遍历的数组去寻找，我们可以用一个hashmap把中序遍历数组的每个元素的值和下标存起来，这样就可以直接找到了，减少循环
+回看记录200622先序的一个数为根节点，再从中序中找到根节点下标，然后递归调用左右
+代码1：123 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/LeetCode--104/" title="104. 二叉树的最大深度/面试题55 - I. 二叉树的深度(简单)">104. 二叉树的最大深度/面试题55 - I. 二叉树的深度(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.050Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">104. 二叉树的最大深度/面试题55 - I. 二叉树的深度(简单)给定一个二叉树，找出其最大深度。
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+说明: 叶子节点是指没有子节点的节点。
+示例：给定二叉树 [3,9,20,null,null,15,7]，
+123453  &#x2F; \ 9  20   &#x2F;  \  15   7
+
+返回它的最大深度 3 。 
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree
+
+
+思路：这题属于简单题，常规解法用递归最简单，还有用自定义栈实现（DFS）
+回看记录20.05.19添加栈实现
+代码1：1234567891011121314151617181920212223242526/** * Definition for a binary tree node. * public class TreeNode &#123; *     int val; *     TreeNode left; *     TreeNode  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/17/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/19/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">246</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">117</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Spring--Transaction/" title="Spring--事务">Spring--事务</a><time datetime="2020-09-28T12:48:06.375Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Spring--First%20to%20Know/" title="Spring--基础解析">Spring--基础解析</a><time datetime="2020-09-28T12:48:06.373Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/Redis--No1/" title="Redis--数据持久化">Redis--数据持久化</a><time datetime="2020-09-28T12:48:06.372Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/PAT--B1092/" title="B1092 最好吃的月饼 (20 分)(简单)">B1092 最好吃的月饼 (20 分)(简单)</a><time datetime="2020-09-28T12:48:06.370Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2020/09/28/PAT--B1091/" title="B1091 N-自守数 (15 分)">B1091 N-自守数 (15 分)</a><time datetime="2020-09-28T12:48:06.368Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/DFS/" style="font-size: 1.2em; color: #999da3">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.13em; color: #999a9c">IOC</a> <a href="/tags/JVM/" style="font-size: 1.13em; color: #999a9c">JVM</a> <a href="/tags/Java/" style="font-size: 1.13em; color: #999a9c">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.13em; color: #999a9c">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.17em; color: #999c9f">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.23em; color: #999ea6">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.23em; color: #999ea6">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.43em; color: #99a6b9">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.33em; color: #99a2af">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.13em; color: #999a9c">Redis</a> <a href="/tags/SQL/" style="font-size: 1.13em; color: #999a9c">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.23em; color: #999ea6">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.13em; color: #999a9c">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/set/" style="font-size: 1.17em; color: #999c9f">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.17em; color: #999c9f">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.27em; color: #99a0a9">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.37em; color: #99a4b2">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.2em; color: #999da3">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1.17em; color: #999c9f">优先队列</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 1.3em; color: #99a1ac">位运算</a> <a href="/tags/%E5%80%BC%E5%BE%97%E5%9B%9E%E7%9C%8B/" style="font-size: 1.4em; color: #99a5b6">值得回看</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.13em; color: #999a9c">分布式</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 1.2em; color: #999da3">分治</a> <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: #999">创建型模式</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 1.47em; color: #99a8bc">剑指offer</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">246</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">246</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-09-28T12:48:24.655Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
