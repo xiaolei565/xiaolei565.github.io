@@ -76,7 +76,7 @@ var saveToLocal = {
   isHome: true,
   isHighlightShrink: false,
   isSidebar: false,
-  postUpdate: '2021-03-23 23:38:36'
+  postUpdate: '2021-03-28 23:17:36'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -136,7 +136,119 @@ if (autoChangeMode === '1') {
 } else {
   if (t === 'dark') activateDarkMode()
   else if (t === 'light') activateLightMode()
-}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">282</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">122</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/JavaFrame--Mybatis_3_Config_Parse/" title="Java--Mybatis配置解析">Java--Mybatis配置解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.972Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Mybatis
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">287</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">122</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Reflect/" title="Java基础--Java反射和应用（未写完）">Java基础--Java反射和应用（未写完）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.982Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java基础–Java反射和应用什么是反射反射就是指程序在运行的时候知道一个类的自身信息。
+
+对于任何一类：可以知道这个类的属性和方法
+对于任何一个对象：可以调用这个对象的任何一个方法和属性
+
+反射就是将Java类中的各种成分映射成一个个Java对象
+获取class文件对象的三种方式
+Object类的getClass()方法
+123456&#x2F;&#x2F;1.在内存中新建一个Person的实例，对象p对这个内存地址进行引用Person p &#x3D; new Person();&#x2F;&#x2F;2.对象p调用getClass()返回对象p所对应的Class对象Class&lt;?&gt; cls &#x3D; p.getClass();&#x2F;&#x2F;3.调用newInstance()方法让Class对象在内存创建对应的实例，并且让p2引用实例的内存地址Person p2 &#x3D; (Person)cls.newInstance();
+
+静态属性class
+
+Class类中静态方法forName()
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--MultiThreading/" title="Java--多线程">Java--多线程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.980Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java–多线程相关介绍线程有哪些基本状态
+
+
+
+
+状态名称
+说明
+
+
+
+NEW
+初始状态，线程被构建，但是还没有调用start()方法
+
+
+RUNNABLE
+运行状态，Java线程将操作系统中的就绪和运行两种状态，笼统称为运行中
+
+
+BLOCKED
+阻塞状态，表示线程阻塞于锁
+
+
+WAITING
+等待状态，表示线程进入等待状态，进入该状态标识当前线程需要等待其他线程做出一些特定的动作（通知或中断）
+
+
+TIME_WAITING
+超时等待状态，该状态不同于WAITING，它可以在指定的时间自行返回的
+
+
+TERMINATED
+终止状态，表示当前线程已经执行完毕了
+
+
+
+
+
+
+
+
+
+
+
+wait
+进入等待释放，线程释放持有的锁
+wait()方法返回，线程获取到锁,进入等待队列
+
+
+wait(long)
+进入timeed_waiting状态时，释放当前持有的锁
+wait(long)方法返回，线程获取到锁，进入等待队列
+
+
+notify()
+唤醒一个线程从等待队列进入同步队列中，不会释放当前持有的锁。
+
+
+
+notifyAll()
+将等待队列中的所有线程移到同步队列中，不会释放当前持有的锁
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Java--Map/" title="Java基础--Map集合">Java基础--Map集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.978Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Java基础–Map集合HashMap与HashTable的区别
+线程安全：HashMap非线程安全，HashTable非线程安全的，因为hashTable内部方法基本经过synchronized修饰
+效率：HashMap因为非线程安全，执行效率比HashTable高一点（但HashTable现在基本不用了）
+kv是否可为空：HashTable不允许，HashMap允许有一个null的键，但可以允许有多个null的值
+初始值与扩容：
+HashTable:初始默认11，若给定了初始值就使用给定值，扩容2n+1
+HashMap：初始默认16，若给定初始值不够2的幂次方，则自动扩充为2的幂次方，（也就是说HashMap总是以2的幂来作为哈希表的大小）扩容2n
+
+
+底层数据结构：
+HashTable：数组+链表
+HashMap：数组+链表（Jdk1.8以前）
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/JavaFrame--Mybatis_5_Log/" title="Java--Mybatis-日志">Java--Mybatis-日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.976Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Mybatismybatis中内置的：
+
+SLF4J 
+LOG4J 【掌握】
+LOG4J2 
+JDK_LOGGING 
+COMMONS_LOGGING
+STDOUT_LOGGING 【掌握】
+NO_LOGGING 
+
+具体实现，在设置中设置
+使用步骤：
+1、导入log4j的包
+12345&lt;dependency&gt;   &lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;   &lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;   &lt;version&gt;1.2.17&lt;&#x2F;version&gt;&lt;&#x2F;dependency&gt;
+
+ 2、配置文件编写 
+123456789101112131415161718192021222324#将等级为DEBUG的日志信息输出到console和file这两个目的地，console和file的定义在下面的代码log4j.rootLogger&#x3D;DEBUG,console,file#控制台输出的相关设置log4j.appender ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/JavaFrame--Mybatis_4_ResultMap/" title="Java--Mybatis-4">Java--Mybatis-4</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.974Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Mybatis解决属性名和字段名不一致的问题
+resultMap
+ 方案一：为列名指定别名 , 别名和java实体类的属性名一致 . 
+123&lt;select id&#x3D;&quot;selectUserById&quot; resultType&#x3D;&quot;User&quot;&gt;  select id , name , pwd as password from user where id &#x3D; #&#123;id&#125;&lt;&#x2F;select&gt;
+
+ 方案二：使用结果集映射-&gt;ResultMap 【推荐】 
+1234567891011&lt;resultMap id&#x3D;&quot;UserMap&quot; type&#x3D;&quot;User&quot;&gt;   &lt;!-- id为主键 --&gt;   &lt;id column&#x3D;&quot;id&quot; property&#x3D;&quot;id&quot;&#x2F;&gt;   &lt;!-- column是数据库表的列名 , pro ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/JavaFrame--Mybatis_3_Config_Parse/" title="Java--Mybatis配置解析">Java--Mybatis配置解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.972Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">Mybatis
 核心配置文件mybatis-config.xml
 Mybatis的配置文件包含了会深深影响Mybatis行为的设置和属性信息
 
@@ -210,101 +322,4 @@ StringBuffer对方法加锁了，所以是线程安全的
 时间过得太久了，不太记得其他的了，由于是日常实习没有问算法题目
 已拿到offer
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/InterView--Huawei1/" title="面试--华为BG消费者一面（2020年5月11日已挂）">面试--华为BG消费者一面（2020年5月11日已挂）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.959Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">
-自我介绍
-之前在公司做什么，简单说一下
-问笔试题有想过怎么做吗，说了第二题要用栈而不是滑动窗口。
-手撸代码，leetcode第五题，回文子串：我暴力求解了，面试官说不行，叫给个提示，他说动态规划，先判断前面一个子串是不是回文，如果是，添加一个字符，再判断是不是回文，我就问他，12不是回文，但是121是回文，这种怎么算，他拿着他自己写的代码看了十几分钟就没解释清楚。（这个解释了半个多小时）
-平衡二叉树是什么
-java中被final修饰的类
-软件工程的生命周期
-单例模式的实现
-单例模式的优化，加synchronized修饰
-然后说问题答得还行，但是代码能力有点欠缺，这个暴力求解不算过关，回去再准备准备吧，要不然这边每次都有考核即使这次过了，后面考核也过不了，先回去加强一下，后面再来，，，，，ಠ_ಠ啥都不是，感觉这个bg部门人招满了，就不想要人。
-总面试时间一小时二十分钟，代码不符合要求
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/InterView--Bytedance1/" title="面试--字节一面（2020年4月29日已挂）">面试--字节一面（2020年4月29日已挂）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.957Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">
-自我介绍
-根据简历里面写的项目提问
-之前在公司做什么，具体说一下
-我的项目里面有数据连接的东西
-架构是什么：没有
-具体实现流程是什么：
-知道sql注入吗
-怎么防止sql注入: 懵逼，一直问
-用过数据库连接池吗
-写一个正则判断，身份证的
-为什么要筛数据：也不知道问的到底是啥
-
-
-还有什么项目
-说一下static关键字
-exe和class的区别
-关于hadoop
-说一下wordcount实现过程
-了解shuffle吗
-为什么要shuffle：不知道
-
-
-linux了解多少
-拷贝命令：cp
-打包命令：tar
-授权命令：chmod
-了解类加载机制吗，说一下
-进程和线程区别
-说一下了解的进程调度算法：一时没想起来，说了fcfi，lru
-TCP四层，说一下：说了一个网络层，应用层，结果还是错的：：：：网络接口层，网际层，运输层，应用层，
-java程序运行起来是进程还是线程
-==与equals的区别
-java中是什么传递String a =”a”,function(a),print(a）function中将a改成b了，那么打印的是a还是b，：值传递，打印的是a
-接19，数组可不可以：可以，给他解释 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Essential--Markdown/" title="markdown语法">markdown语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.955Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">1. 标题#标题 ———— 一级标题
-##标题 ———— 二级标题
-###标题 ———— 三级标题
-####标题 ———— 四级标题
-#####标题 ———— 五级标题
-######标题 ———— 六级标题
-2. 字体*文字* ———— 斜体
-**文字** ———— 粗体 
-***文字*** ———— 粗斜体
-~~文字~~ ———— 删除线
-
-3. 列表-文字1
--文字2 ———— 无序列表（“+”也可以，列表嵌套，在上一级和下一级之间敲三个空格即可）
-
-1. 文字1
-2. 文字2 ———— 有序列表（数字.后面需要加一个backspace）
-4. 链接[显示文本](链接地址) ———— 文字链接（括号中地址支持网络地址）
-
-![文本](图片链接地址) ———— 图片链接（文本域可空）
-5. 引用&gt; 文本 ———— 引用（可以无限叠加） 
-&#39;&#39;&#39; 
-    代码段
-&#39;&#39;&#39; ———— 代码块引用
-&#39; 代码 &#39; ———— 单行代码引用
-6. 分隔***或--- ———— 表示分割线
-7. 表格表头|表头|表头
----|: ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Essential--Git/" title="git常用命令介绍">git常用命令介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.953Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">1. 安装好git需要做的事情$ git config --global user.name &quot;Your Name&quot;
-$ git config --global user.email &quot;email@example.com&quot;
-因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。你也许会担心，如果有人故意冒充别人怎么办？这个不必担心，首先我们相信大家都是善良无知的群众，其次，真的有冒充的也是有办法可查的。
-注意git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
-其他参数
-–local：只对某个仓库有效
-–global：对当前用户的所有仓库有效
-–system：对系统登录的所有用户有效
-
-
-2. 初始化创建版本库$ git init
-在本地新建一个repo,进入一个项目目录,执行git init,会初始化一个repo,并在当前文件夹下创建一个.git文件夹.repo文件夹下新建readme.txt作为下一 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/DesignPattern--Singleton/" title="设计模式--单例模式">设计模式--单例模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:05.950Z" title="发表于 2020-09-28 20:48:05">2020-09-28</time></span></div><div class="content">设计模式–单例模式要搞清楚以下几个问题？
-
-为什么要使用单例
-单例存在哪些问题
-单例与静态类的区别
-有何替代的解决方案
-
-什么是单例模式单例设计模式：一个类只允许创建一个对象（实例）,那这个类就是一个单例类，这种设计模式就是单例设计模式。
-。。。。
-实例1：避免i资源访问冲突
-将对象级别的锁换成类级别的锁就行，让所有的对象都共享一把锁。这样就避免了不同对象之间同时调用log()函数，而导致的日志覆盖问题
-单例模式的解决思路就简单一些了。单例模式相对于之前类级别锁的好处是，不用创建那么多Logger对象，一方面节省内存空间，另一方面节省系统文件句柄（对于OS来说，文件句柄也是一种资源，不能随便浪费）
-我们将Logger设计成一个单例类，程序中只允许创建一个Logger对象，所有的线程共享使用这一个Logger对象，共享一个FileWriter对象，而FileWriter本身是对象级别线程安全的，也就避免了多线程情况下写日志会相互覆盖的问题。
-1234567891011public class Logger&#123;    private FileWriter writer;    pr ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/26/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/28/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">282</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">122</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/23/LeetCode--23AA/" title="23. 合并K个升序链表(一般)">23. 合并K个升序链表(一般)</a><time datetime="2021-03-23T15:25:31.518Z" title="发表于 2021-03-23 23:25:31">2021-03-23</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/22/LeetCode--461D/" title="461. 汉明距离(简单)">461. 汉明距离(简单)</a><time datetime="2021-03-22T15:35:49.108Z" title="发表于 2021-03-22 23:35:49">2021-03-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/18/LeetCode--92A/" title="92. 反转链表 II(较难)">92. 反转链表 II(较难)</a><time datetime="2021-03-18T14:42:48.482Z" title="发表于 2021-03-18 22:42:48">2021-03-18</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/13/LeetCode--200A/" title="200. 岛屿数量(一般)">200. 岛屿数量(一般)</a><time datetime="2021-03-13T14:25:35.659Z" title="发表于 2021-03-13 22:25:35">2021-03-13</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/12/LeetCode--145D/" title="145. 二叉树的后序遍历(简单)">145. 二叉树的后序遍历(简单)</a><time datetime="2021-03-12T14:17:25.237Z" title="发表于 2021-03-12 22:17:25">2021-03-12</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.18em; color: #999ca1">BFS</a> <a href="/tags/BST/" style="font-size: 1.18em; color: #999ca1">BST</a> <a href="/tags/DFS/" style="font-size: 1.22em; color: #999ea4">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.14em; color: #999b9d">IOC</a> <a href="/tags/JVM/" style="font-size: 1.14em; color: #999b9d">JVM</a> <a href="/tags/Java/" style="font-size: 1.14em; color: #999b9d">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.14em; color: #999b9d">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.18em; color: #999ca1">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.22em; color: #999ea4">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/LinkedHashMap/" style="font-size: 1.1em; color: #999">LinkedHashMap</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.22em; color: #999ea4">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.46em; color: #99a7bb">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.34em; color: #99a3b0">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.14em; color: #999b9d">Redis</a> <a href="/tags/SQL/" style="font-size: 1.14em; color: #999b9d">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.22em; color: #999ea4">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.14em; color: #999b9d">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/set/" style="font-size: 1.18em; color: #999ca1">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.22em; color: #999ea4">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.26em; color: #999fa8">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.38em; color: #99a4b4">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.26em; color: #999fa8">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1.18em; color: #999ca1">优先队列</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 1.3em; color: #99a1ac">位运算</a> <a href="/tags/%E5%80%BC%E5%BE%97%E5%9B%9E%E7%9C%8B/" style="font-size: 1.42em; color: #99a6b7">值得回看</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.14em; color: #999b9d">分布式</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">244</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">282</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-23T15:38:35.913Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/26/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/28/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">287</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">122</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/28/LeetCode--215B/" title="215. 数组中的第K个最大元素(简单)">215. 数组中的第K个最大元素(简单)</a><time datetime="2021-03-28T15:14:21.246Z" title="发表于 2021-03-28 23:14:21">2021-03-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/28/LeetCode--148A/" title="148. 排序链表(一般)">148. 排序链表(一般)</a><time datetime="2021-03-28T14:37:55.856Z" title="发表于 2021-03-28 22:37:55">2021-03-28</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/27/LeetCode--18A/" title="18. 四数之和(一般)">18. 四数之和(一般)</a><time datetime="2021-03-26T17:03:20.184Z" title="发表于 2021-03-27 01:03:20">2021-03-27</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/26/LeetCode--83C/" title="83. 删除排序链表中的重复元素(简单)">83. 删除排序链表中的重复元素(简单)</a><time datetime="2021-03-26T07:05:16.170Z" title="发表于 2021-03-26 15:05:16">2021-03-26</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/03/23/LeetCode--23AA/" title="23. 合并K个升序链表(一般)">23. 合并K个升序链表(一般)</a><time datetime="2021-03-23T15:25:31.518Z" title="发表于 2021-03-23 23:25:31">2021-03-23</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.17em; color: #999ca0">BFS</a> <a href="/tags/BST/" style="font-size: 1.17em; color: #999ca0">BST</a> <a href="/tags/DFS/" style="font-size: 1.25em; color: #999fa7">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.14em; color: #999a9c">IOC</a> <a href="/tags/JVM/" style="font-size: 1.14em; color: #999a9c">JVM</a> <a href="/tags/Java/" style="font-size: 1.14em; color: #999a9c">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.14em; color: #999a9c">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.17em; color: #999ca0">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.25em; color: #999fa7">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/LinkedHashMap/" style="font-size: 1.1em; color: #999">LinkedHashMap</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.25em; color: #999fa7">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.46em; color: #99a8bc">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.35em; color: #99a3b1">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.14em; color: #999a9c">Redis</a> <a href="/tags/SQL/" style="font-size: 1.14em; color: #999a9c">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.25em; color: #999fa7">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.14em; color: #999a9c">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/set/" style="font-size: 1.17em; color: #999ca0">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.25em; color: #999fa7">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.28em; color: #99a0aa">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.39em; color: #99a5b5">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.28em; color: #99a0aa">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1.21em; color: #999da3">优先队列</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 1.32em; color: #99a2ae">位运算</a> <a href="/tags/%E5%80%BC%E5%BE%97%E5%9B%9E%E7%9C%8B/" style="font-size: 1.43em; color: #99a6b8">值得回看</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.14em; color: #999a9c">分布式</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">19</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">245</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">287</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-28T15:17:36.657Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
