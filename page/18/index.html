@@ -76,7 +76,7 @@ var saveToLocal = {
   isHome: true,
   isHighlightShrink: false,
   isSidebar: false,
-  postUpdate: '2021-07-12 19:26:51'
+  postUpdate: '2021-08-26 09:24:47'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -136,117 +136,151 @@ if (autoChangeMode === '1') {
 } else {
   if (t === 'dark') activateDarkMode()
   else if (t === 'light') activateLightMode()
-}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">318</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">131</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--57/" title="面试题57. 和为s的两个数字(简单)">面试题57. 和为s的两个数字(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.198Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题56 - I. 数组中数字出现的次数(较难，未写完)输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。
-示例 1：输入：nums = [2,7,11,15], target = 9输出：[2,7] 或者 [7,2]
-示例 2：输入：nums = [10,26,30,31,47,60], target = 40输出：[10,30] 或者 [30,10]
-限制：1 &lt;= nums.length &lt;= 10^51 &lt;= nums[i] &lt;= 10^6
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">328</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">134</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xiaolei565</a></span><span id="menus"><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">xiaolei565</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--66/" title="面试题66. 构建乘积数组(一般)">面试题66. 构建乘积数组(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.215Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题66. 构建乘积数组/238. 除自身以外数组的乘积(一般)给定一个数组 A[0,1,…,n-1]，请构建一个数组 B[0,1,…,n-1]，其中 B 中的元素 B[i]=A[0]×A[1]×…×A[i-1]×A[i+1]×…×A[n-1]。不能使用除法。
+示例:输入: [1,2,3,4,5]输出: [120,60,40,30,24]
+提示：所有元素乘积之和不会溢出 32 位整数a.length &lt;= 100000
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof
 
 
-思路1：二分思路，由于是有序的，可以用二分，其他解释看代码注释
-代码1：12345678910111213141516class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;     ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--56_1/" title="面试题56 - I. 数组中数字出现的次数(较难)">面试题56 - I. 数组中数字出现的次数(较难)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.196Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题56 - I. 数组中数字出现的次数(较难，未写完)一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。
-示例 1：输入：nums = [4,1,4,6]输出：[1,6] 或 [6,1]
-示例 2：输入：nums = [1,2,10,4,1,4,3,3]输出：[2,10] 或 [10,2]
+思路：
+算法流程：
+
+初始化：数组 B ，其中 B[0] = 1；辅助变量 tmp=1 ；
+计算 B[i] 的 下三角 各元素的乘积，直接乘入 B[i] ；
+计算 B[i] 的 上三角 各元素的乘积，记为 tmp ，并乘入 B[i] ；
+返回 B 。
+
+作者：jyd链接：https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/so ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--65/" title="面试题65. 不用加减乘除做加法(一般)">面试题65. 不用加减乘除做加法(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.214Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题65. 不用加减乘除做加法(一般)写一个函数，求两个整数之和，要求在函数体内不得使用 “+”、“-”、“*”、“/” 四则运算符号。
+示例:输入: a = 1, b = 1输出: 2
+提示：a, b 均可能是负数或 0结果不会溢出 32 位整数
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof
+
+
+思路：本题考察对位运算的灵活使用，即使用位运算实现加法。设两数字的二进制形式 a,b ，其求和 s=a+b ，a(i) 代表 a 的二进制第 i位，则分为以下四种情况：
+
+
+
+a(i)
+b(i)
+无进位和 n(i)
+进位c(i+1)
+
+
+
+00
+00
+00
+00
+
+
+00
+11
+11
+00
+
+
+11
+00
+11
+00
+
+
+11
+11
+00
+11
+
+
+观察发现，无进位和 与 异或运算 规律相同，进位 和 与运算 规律相同（并需左移一位）。因此，无进位和 n 与进位 c 的计算公式如下；$$\begin{cases} n = a \oplus b &am ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--64/" title="面试题64. 求1+2+…+n(一般)">面试题64. 求1+2+…+n(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.212Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题64. 求1+2+…+n(一般)求 1+2+…+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
+示例 1：输入: n = 3输出:  6
+示例 2：输入: n = 9输出: 45
+限制：1 &lt;= n &lt;= 10000
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/qiu-12n-lcof
+
+
+思路：利用短路原则搞定递归返回条件
+使用递归解法最重要的是指定返回条件，但是本题无法直接使用 if 语句来指定返回条件。
+条件与 &amp;&amp; 具有短路原则，即在第一个条件语句为 false 的情况下不会去执行第二个条件语句。利用这一特性，将递归的返回条件取非然后作为 &amp;&amp; 的第一个条件语句，递归的主体转换为第二个条件语句，那么当递归的返回条件为 true 的情况下就不会执行递归的主体部分，递归返回。
+本题的递归返回条件为 n &lt;= 0，取非后就是 n &gt; 0；递归的主体部分为 sum += Sum_Solutio ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--63/" title="121. 买卖股票的最佳时机/面试题63. 股票的最大利润(简单)">121. 买卖股票的最佳时机/面试题63. 股票的最大利润(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.210Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">121. 买卖股票的最佳时机/面试题63. 股票的最大利润(简单)给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。
+注意：你不能在买入股票前卖出股票。
+示例 1:输入: [7,1,5,3,6,4]输出: 5解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+ 注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。
+示例 2:输入: [7,6,4,3,1]输出: 0解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock
+
+
+思路1：​    找最大差值即可max(prices[j]-price[i]),j&gt;i
+  前i日最大利润=max(前(i−1)日最大利润,第i日价格−前i日最低 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--62/" title="面试题62. 圆圈中最后剩下的数字(简单)">面试题62. 圆圈中最后剩下的数字(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.209Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题62. 圆圈中最后剩下的数字(简单)0,1,,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字。求出这个圆圈里剩下的最后一个数字。
+例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。
+示例 1：输入: n = 5, m = 3输出: 3
+示例 2：输入:n = 10, m = 17输出: 2
 限制：
-2 &lt;= nums &lt;= 10000
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof
+1 &lt;= n &lt;= 10^51 &lt;= m &lt;= 10^6
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof
 
 
-思路1：和leetcode260一样
-直接set去重，如果有两个，则将第一个也进行删除，第二个不add
-思路2：这里主要是数学的位运算
-代码1：123456789101112class Solution &#123;    public int[] singleNumbers(int[] nums) &#123;        //哈希         ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--55_2/" title="面试题55 - II. 平衡二叉树/110. 平衡二叉树(简单)">面试题55 - II. 平衡二叉树/110. 平衡二叉树(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.194Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题55 - II. 平衡二叉树/110. 平衡二叉树(简单)输入一棵二叉树的根节点，判断该树是不是平衡二叉树。如果某二叉树中任意节点的左右子树的深度相差不超过1，那么它就是一棵平衡二叉树。
-示例 1:给定二叉树 [3,9,20,null,null,15,7]
-12345  3 &#x2F; \9  20  &#x2F;  \ 15   7
-
-返回 true 。
-示例 2:给定二叉树 [1,2,2,3,3,null,null,4,4]
-1234567      1     &#x2F; \    2   2   &#x2F; \  3   3 &#x2F; \4   4
-
-返回 false 。
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof
+思路1：第一反应就是使用数组或者链表进行模拟，但是复杂度太高O（mn）
+思路2：约瑟夫环问题递归解法的一点理解
+约瑟夫环之二(用递归的思想解决Josephus问题)
+约瑟夫环问题，这里参考题中一个解答
+约瑟夫问题比较难想的点有两个：
+当数到最后一个结点不足m个时，需要跳到第一个结点继续 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--61/" title="面试题61. 扑克牌中的顺子(简单)">面试题61. 扑克牌中的顺子(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.207Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题60. n个骰子的点数(一般)从扑克牌中随机抽5张牌，判断是不是一个顺子，即这5张牌是不是连续的。2～10为数字本身，A为1，J为11，Q为12，K为13，而大、小王为 0 ，可以看成任意数字。A 不能视为 14。
+示例 1:输入: [1,2,3,4,5]输出: True
+示例 2:输入: [0,0,1,2,5]输出: True
+限制：数组长度为 5 
+数组的数取值为 [0, 13] .
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof
 
 
-思路1：递归思想，利用求深度的过程，进行判断即可
-思路2：需要写非递归版本，请于200711补上
-代码1：12345678910111213141516171819202122232425/** * Definition for a bi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--54/" title="面试题54. 二叉搜索树的第k大节点(简单)">面试题54. 二叉搜索树的第k大节点(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.193Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题54. 二叉搜索树的第k大节点(简单)给定一棵二叉搜索树，请找出其中第k大的节点。
-示例 1:输入: root = [3,1,4,null,2], k = 1
-12345  3 &#x2F; \1   4 \  2
-
-输出: 4
-示例 2:输入: root = [5,3,6,2,4,null,null,1], k = 3
-1234567   5     &#x2F; \    3   6   &#x2F; \  2   4 &#x2F;1
-
-
-输出: 4
-限制：1 ≤ k ≤ 二叉搜索树元素个数
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof
-
-
-思路：找第k大的，如果是中序遍历，则是递增，所以逆中序遍历即可
-代码：12345678910111213141516171819202122232425262728/** * Definition for a binary tree node. * public class TreeNode &#1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--53-2/" title="面试题53 - II. 0～n-1中缺失的数字(简单)">面试题53 - II. 0～n-1中缺失的数字(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.191Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题53 - II. 0～n-1中缺失的数字(简单)一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。
-示例 1:输入: [0,1,3]输出: 2
-示例 2:输入: [0,1,2,3,4,5,6,7,9]输出: 8
-限制：1 &lt;= 数组长度 &lt;= 10000
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof
-
-
-思路：二分查找的思路，将所有数分为左右两部分，左半部分，下标和值一样，右半部分，下标和值不一样，我们要找的就是右半部分的第一个数
-算法解析：
-
-初始化： 左边界i=0 ，右边界 j = len(nums) - 1；代表闭区间 [i,j] 。
-循环二分： 当 i≤j 时循环 （即当闭区间 [i, j] 为空时跳出） ；
-计算中点 m = (i + j) // 2，其中 “//“ 为向下取整除法； 
-若 nums[m] = m ，则 “右子数组的首位元素”  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--53-1/" title="面试题53 - I. 在排序数组中查找数字 I(一般)">面试题53 - I. 在排序数组中查找数字 I(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.189Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题53 - I. 在排序数组中查找数字 I(一般)统计一个数字在排序数组中出现的次数。
-示例 1:输入: nums = [5,7,7,8,8,10], target = 8输出: 2
-示例 2:输入: nums = [5,7,7,8,8,10], target = 6输出: 0
+思路1：注意大小王是可以随配的
+可以走个捷径，判断最大值与最小值的差大于小于5，小于5，肯定是同花顺，但是要注意先排序，判断最后一个大小王，
+思路2：同思路1，只是将排序换成set进行去重
+dp[i] [j]表示掷i个骰子，出现j点数的次数
+转移方程为
+ dp[i] [s] += dp[i-1] [s-j];//转移方程 ，当前n个骰子出现的点数之和等于前一次出现的点数之和加上这一次出现的点数 
+回看记录200726这个思路真的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--60/" title="面试题60. n个骰子的点数(一般)">面试题60. n个骰子的点数(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.206Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题60. n个骰子的点数(一般)把n个骰子扔在地上，所有骰子朝上一面的点数之和为s。输入n，打印出s的所有可能的值出现的概率。
+你需要用一个浮点数数组返回答案，其中第 i 个元素代表这 n 个骰子所能掷出的点数集合中第 i 小的那个的概率。
+示例 1:输入: 1输出: [0.16667,0.16667,0.16667,0.16667,0.16667,0.16667]
+示例 2:输入: 2输出: [0.02778,0.05556,0.08333,0.11111,0.13889,0.16667,0.13889,0.11111,0.08333,0.05556,0.02778]
 限制：
-0 &lt;= 数组长度 &lt;= 50000
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof
+1 &lt;= n &lt;= 11
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof
 
 
-思路：二分查找的变体形式，利用两次二分找到第一次出现的下标和最后一次出现的下标，计算长度即可，注意练习二分查找变体的代码
-代码1：12345678910111213141516171819202122232425262728class Solution &#123;    public int search(int[] nums, int target) &#123;        int low = 0;        int high = nums.le ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--51/" title="面试题51. 数组中的逆序对(困难)">面试题51. 数组中的逆序对(困难)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.188Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题51. 数组中的逆序对(困难)在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。
-示例 1:输入: [7,5,6,4]输出: 5
-限制：0 &lt;= 数组长度 &lt;= 50000
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof
+思路：动态规划思路：
+dp[i] [j]表示掷i个骰子，出现j点数的次数
+转移方程为
+ dp[i] [s] += dp[i-1] [s-j];//转移方程 ，当前n个骰子出现的点数之和等于前一次出现的点数之和加 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--59-2/" title="面试题59 - II. 队列的最大值(一般)">面试题59 - II. 队列的最大值(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.204Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题59 - II. 队列的最大值(一般)请定义一个队列并实现函数 max_value 得到队列里的最大值，要求函数max_value、push_back 和 pop_front 的均摊时间复杂度都是O(1)。
+若队列为空，pop_front 和 max_value 需要返回 -1
+示例 1：输入:[“MaxQueue”,”push_back”,”push_back”,”max_value”,”pop_front”,”max_value”][[],[1],[2],[],[],[]]输出: [null,null,null,2,1,2]
+示例 2：输入:[“MaxQueue”,”pop_front”,”max_value”][[],[],[]]输出: [null,-1,-1]
+限制：1 &lt;= push_back,pop_front,max_value的总操作数 &lt;= 100001 &lt;= value &lt;= 10^5
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lco ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--58-2/" title="面试题58 - II. 左旋转字符串(简单)">面试题58 - II. 左旋转字符串(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.202Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题58 - II. 左旋转字符串(简单)字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。
+示例 1：输入: s = “abcdefg”, k = 2输出: “cdefgab”
+示例 2：输入: s = “lrloseumgh”, k = 6输出: “umghlrlose”
+限制：1 &lt;= k &lt; s.length &lt;= 10000
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof
 
 
-思路：归并排序，需要了解归并排序解题模板
-分治思想：
-
-分两块，左右
-分别计算，左边，右边
-再计算横跨左右的
-
-代码1：1234567891011121314151617181920212223242526272829303132333435363738class Solution &#123;    public int reversePairs(int[] nums) &#123;              // int[] assist = new int[nums.length];        return mergeSort(nums,0,nums ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--50/" title="面试题50. 第一个只出现一次的字符(简单)">面试题50. 第一个只出现一次的字符(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.186Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题50. 第一个只出现一次的字符(简单)在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。
-示例:s = “abaccdeff”返回 “b”
-s = “”返回 “ “
-限制：
-0 &lt;= s 的长度 &lt;= 50000
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof
+思路：逆转前n个字符，再逆转后面的，最后将整体逆转，就实现了整体左旋
+代码1：1234567891011121314151617181920class Solution &#123;    public String reverseLeftWords(String s, int n) &#123;            ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--57-2/" title="面试题57 - II. 和为s的连续正数序列(一般)">面试题57 - II. 和为s的连续正数序列(一般)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.200Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题57 - II. 和为s的连续正数序列(一般)输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
+序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
+示例 1：输入：target = 9输出：[[2,3,4],[4,5]]
+示例 2：输入：target = 15输出：[[1,2,3,4,5],[4,5,6],[7,8]]
+限制：1 &lt;= target &lt;= 10^5
+来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof
 
 
-思路1：典型哈希思想，使用数组计数，然后遍历，数组中第一个等于1的数被输出
-代码1：123456789101112131415class Solution &#123;    public char firstUniqChar(String s) &#123;        char[] c_str = s.toCharArray();        int[] count = new int[26];        for(char c:c_str)&#123;            count[c-&#x27;a&#x27;]++;         ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--47/" title="面试题47. 礼物的最大价值(简单)">面试题47. 礼物的最大价值(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.185Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题47. 礼物的最大价值(简单)在一个 m*n 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 0）。你可以从棋盘的左上角开始拿格子里的礼物，并每次向右或者向下移动一格、直到到达棋盘的右下角。给定一个棋盘及其上面的礼物的价值，请计算你最多能拿到多少价值的礼物？
-示例 1:输入: 
-12345[  [1,3,1],  [1,5,1],  [4,2,1]]
+思路1：
+创建双指针i，j都指向1，sum求和。i，j之间就是窗口大小
 
-输出: 12解释: 路径 1→3→5→2→1 可以拿到最多价值的礼物
-提示：
-0 &lt; grid.length &lt;= 2000 &lt; grid[0].length &lt;= 200
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof
+若target大于sum说明数字之和 不够，右指针j需要右移j++直至sum小于target（等于时直接跳出存储结果到list）
+
+若此时target小于sum说明数字之和 超出，调整左指针i–直至满足sum=target
 
 
-思路1：明显是dp，转移方程为$$d p(i, j)=\left{\begin{array}{ll}\operatorname{grid}(i, j) &amp; , i=0, j=0 \\operatorname{grid}(i, j)+d p(i, j-1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2020/09/28/Offer--46/" title="面试题46. 把数字翻译成字符串(简单)">面试题46. 把数字翻译成字符串(简单)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-28T12:48:06.183Z" title="发表于 2020-09-28 20:48:06">2020-09-28</time></span></div><div class="content">面试题46. 把数字翻译成字符串(简单)给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。
-示例 1:输入: 12258输出: 5解释: 12258有5种不同的翻译，分别是&quot;bccfi&quot;, &quot;bwfi&quot;, &quot;bczi&quot;, &quot;mcfi&quot;和&quot;mzi&quot;
-提示：0 &lt;= num &lt; 231
-来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof
+算法步骤
 
-
-思路：动态规划思路
-dp[i]表示以数字num[i]结尾的翻译方案数
-如果i和i-1位组合可以翻译的话，也就是在10到25之间的话，dp[i]=dp[i-1]+dp[i-2];  
-如果不能翻译，则就是dp[i]=dp[i-1];
-由于单 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/17/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/19/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">318</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">131</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/08/LeetCode--416AA/" title="416. 分割等和子集(较难)">416. 分割等和子集(较难)</a><time datetime="2021-07-08T07:59:09.296Z" title="发表于 2021-07-08 15:59:09">2021-07-08</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/06/LeetCode--63BA/" title="63. 不同路径 II(一般)">63. 不同路径 II(一般)</a><time datetime="2021-07-06T05:44:09.390Z" title="发表于 2021-07-06 13:44:09">2021-07-06</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/05/LeetCode--746AB/" title="746. 使用最小花费爬楼梯(一般)">746. 使用最小花费爬楼梯(一般)</a><time datetime="2021-07-05T12:48:15.466Z" title="发表于 2021-07-05 20:48:15">2021-07-05</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/04/LeetCode--143BB/" title="143. 重排链表(一般)">143. 重排链表(一般)</a><time datetime="2021-07-04T12:02:23.639Z" title="发表于 2021-07-04 20:02:23">2021-07-04</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/02/LeetCode--797AB/" title="797. 所有可能的路径(一般)">797. 所有可能的路径(一般)</a><time datetime="2021-07-02T11:46:36.862Z" title="发表于 2021-07-02 19:46:36">2021-07-02</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.18em; color: #999ca1">BFS</a> <a href="/tags/BST/" style="font-size: 1.18em; color: #999ca1">BST</a> <a href="/tags/DFS/" style="font-size: 1.26em; color: #999fa8">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.14em; color: #999b9d">IOC</a> <a href="/tags/JVM/" style="font-size: 1.14em; color: #999b9d">JVM</a> <a href="/tags/Java/" style="font-size: 1.14em; color: #999b9d">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.14em; color: #999b9d">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.18em; color: #999ca1">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.26em; color: #999fa8">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/LinkedHashMap/" style="font-size: 1.1em; color: #999">LinkedHashMap</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.26em; color: #999fa8">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.46em; color: #99a7bb">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.38em; color: #99a4b4">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.14em; color: #999b9d">Redis</a> <a href="/tags/SQL/" style="font-size: 1.14em; color: #999b9d">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.26em; color: #999fa8">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.14em; color: #999b9d">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/map/" style="font-size: 1.1em; color: #999">map</a> <a href="/tags/set/" style="font-size: 1.22em; color: #999ea4">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 1.14em; color: #999b9d">中序遍历</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.26em; color: #999fa8">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.3em; color: #99a1ac">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.18em; color: #999ca1">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.42em; color: #99a6b7">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%80%92%E5%BD%92/" style="font-size: 1.1em; color: #999">二叉树 - 递归</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.34em; color: #99a3b0">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a> <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" style="font-size: 1.22em; color: #999ea4">优先队列</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">19</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
-              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">318</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-12T11:26:51.273Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+创建指针、求和变量和list集合（用于存储满足的结果） ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/17/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/19/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Glor</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">328</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">134</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/22/LeetCode--112/" title="112. 路径总和(较难)">112. 路径总和(较难)</a><time datetime="2021-07-22T01:15:12.002Z" title="发表于 2021-07-22 09:15:12">2021-07-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/20/LeetCode--450AB/" title="450. 删除二叉搜索树中的节点(一般)">450. 删除二叉搜索树中的节点(一般)</a><time datetime="2021-07-20T12:55:25.101Z" title="发表于 2021-07-20 20:55:25">2021-07-20</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/19/LeetCode--235AB/" title="235. 二叉搜索树的最近公共祖先(一般)">235. 二叉搜索树的最近公共祖先(一般)</a><time datetime="2021-07-19T12:34:12.953Z" title="发表于 2021-07-19 20:34:12">2021-07-19</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/19/LeetCode--501BB/" title="501. 二叉搜索树中的众数(一般)">501. 二叉搜索树中的众数(一般)</a><time datetime="2021-07-19T01:55:08.716Z" title="发表于 2021-07-19 09:55:08">2021-07-19</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2021/07/18/LeetCode--530/" title="530/783. 二叉搜索树的最小绝对差(简单)">530/783. 二叉搜索树的最小绝对差(简单)</a><time datetime="2021-07-18T13:44:08.102Z" title="发表于 2021-07-18 21:44:08">2021-07-18</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.18em; color: #999ca1">BFS</a> <a href="/tags/BST/" style="font-size: 1.18em; color: #999ca1">BST</a> <a href="/tags/DFS/" style="font-size: 1.26em; color: #999fa8">DFS</a> <a href="/tags/GC/" style="font-size: 1.1em; color: #999">GC</a> <a href="/tags/Hash/" style="font-size: 1.1em; color: #999">Hash</a> <a href="/tags/IOC/" style="font-size: 1.14em; color: #999b9d">IOC</a> <a href="/tags/JVM/" style="font-size: 1.14em; color: #999b9d">JVM</a> <a href="/tags/Java/" style="font-size: 1.14em; color: #999b9d">Java</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 1.14em; color: #999b9d">Java基础</a> <a href="/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" style="font-size: 1.18em; color: #999ca1">Java核心技术</a> <a href="/tags/Java%E6%A1%86%E6%9E%B6/" style="font-size: 1.26em; color: #999fa8">Java框架</a> <a href="/tags/LeetCode/" style="font-size: 1.5em; color: #99a9bf">LeetCode</a> <a href="/tags/LeetCode-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4/" style="font-size: 1.1em; color: #999">LeetCode - 二叉树的删除</a> <a href="/tags/LinkedHashMap/" style="font-size: 1.1em; color: #999">LinkedHashMap</a> <a href="/tags/Map/" style="font-size: 1.1em; color: #999">Map</a> <a href="/tags/Mybatis/" style="font-size: 1.26em; color: #999fa8">Mybatis</a> <a href="/tags/Nosql/" style="font-size: 1.1em; color: #999">Nosql</a> <a href="/tags/PAT-%E4%B9%99%E7%BA%A7/" style="font-size: 1.46em; color: #99a7bb">PAT--乙级</a> <a href="/tags/PAT-%E7%94%B2%E7%BA%A7/" style="font-size: 1.38em; color: #99a4b4">PAT--甲级</a> <a href="/tags/Redis/" style="font-size: 1.14em; color: #999b9d">Redis</a> <a href="/tags/SQL/" style="font-size: 1.14em; color: #999b9d">SQL</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/Spring%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" style="font-size: 1.26em; color: #999fa8">Spring必知必会</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hadoop/" style="font-size: 1.14em; color: #999b9d">hadoop</a> <a href="/tags/lambda/" style="font-size: 1.1em; color: #999">lambda</a> <a href="/tags/leetcode/" style="font-size: 1.1em; color: #999">leetcode</a> <a href="/tags/map/" style="font-size: 1.1em; color: #999">map</a> <a href="/tags/set/" style="font-size: 1.22em; color: #999ea4">set</a> <a href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" style="font-size: 1.1em; color: #999">三次握手</a> <a href="/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/" style="font-size: 1.1em; color: #999">中位数</a> <a href="/tags/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 1.18em; color: #999ca1">中序遍历</a> <a href="/tags/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" style="font-size: 1.26em; color: #999fa8">买卖股票问题</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 1.1em; color: #999">事务</a> <a href="/tags/%E4%BA%8C%E5%88%86/" style="font-size: 1.3em; color: #99a1ac">二分</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.18em; color: #999ca1">二分查找</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.42em; color: #99a6b7">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91-%E9%80%92%E5%BD%92/" style="font-size: 1.1em; color: #999">二叉树 - 递归</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" style="font-size: 1.34em; color: #99a3b0">二叉树遍历</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">16</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">19</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">328</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-08-26T01:24:46.874Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Glor</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
